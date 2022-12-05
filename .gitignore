@@ -33,3 +33,6 @@
 
 # platformio specific
 .pio
+
+# vscode specific
+.vscode
