@@ -2,12 +2,12 @@
 #ifndef UART_H
 #define UART_H
 
-
 // include the necessary libraries
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-
+// macro used to calculate register value for UBRR
+#define UBRR_VALUE(baud) ((F_CPU / (baud * 16UL)) - 1)
 
 // function used to initialize the UART on atmega328p
 void initUART(uint16_t ubrr);
